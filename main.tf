@@ -30,6 +30,7 @@ module "rds" {
   public_subnet_az1_id       = module.vpc.public_subnet_az1_id  
   private_subnet_az2_id      = module.vpc.private_subnet_az2_id
   public_subnet_az2_id        = module.vpc.public_subnet_az2_id
+  ec2_security_group_id = module.ec2.ec2_security_group_id
   #private_subnet_ids  = module.vpc.private_subnet_ids
 }  
 
