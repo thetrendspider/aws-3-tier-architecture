@@ -1,4 +1,4 @@
-
+variable "ec2_security_group_id" {} 
 
 resource "aws_db_subnet_group" "mysql_subnet_group" {
   name       = "db-subnet"
@@ -61,9 +61,9 @@ resource "aws_security_group" "rds_sg" {
     protocol    = "tcp"
 
     # Specify the security group ID of the EC2 instance here, e.g., "sg-98765432"
-    /* security_groups = [
-      aws_security_group.ec2_sg.id,
-    ] */
+    security_groups = [
+      var.ec2_security_group_id
+    ]
   }
 }
 
