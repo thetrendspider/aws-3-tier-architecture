@@ -1,4 +1,4 @@
-x
+
 resource "aws_launch_template" "ec2_public" {
   name_prefix   = "ec2_public"
   image_id      = var.ami_id  # Replace with your desired AMI ID
